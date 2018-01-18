@@ -9,33 +9,9 @@ spring:
           search-paths: config-repo
           username: githubtodj
           password: shuyue121
-  profiles:
-    include: peer1
 eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:8000/eureka/
-server:
-  port: 8003
----
-spring:
-  application:
-    name: spring-cloud-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/githubtodj/spring-cloud-example/
-          search-paths: config-repo
-          username: githubtodj
-          password: shuyue121
-  profiles:
-    include: peer2
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:8000/eureka/
-server:
-  port: 8004
 #http://localhost:8001/xt-config-dev.properties
 #http://localhost:8001/xt-config/dev
