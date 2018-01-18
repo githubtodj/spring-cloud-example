@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/githubtodj/spring-cloud-stater/
+          search-paths: config-repo
+          username: githubtodj
+          password: shuyue121
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+#http://localhost:8001/xt-config-dev.properties
+#http://localhost:8001/xt-config/dev

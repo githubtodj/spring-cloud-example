@@ -1,0 +1,16 @@
+server:
+  port: 8001
+
+spring:
+  cloud:
+    config:
+      server:
+        svn:
+          uri: svn://10.211.55.4/Repositories/spring-cloud-master/trunk/
+          username: dengj
+          password: dengj123
+        default-label: config-repo
+  profiles:
+    active: subversion
+  application:
+    name: spring-cloud-config-server
